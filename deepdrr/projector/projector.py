@@ -47,9 +47,8 @@ import cupy as cp
 import cupy
 
 import numpy
-from cuda import cudart
 
-from ..utils.cuda_utils import check_cudart_err, format_cudart_err
+from ..utils.cuda_utils import check_cudart_err, format_cudart_err, cudart
 
 # from cupyx.profiler import time_range
 # import cupyx.profiler

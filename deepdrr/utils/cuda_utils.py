@@ -1,4 +1,8 @@
-from cuda import cudart
+try:
+    from cuda import cudart
+except ImportError:
+    # cuda-python >= 13 exposes runtime bindings in cuda.bindings.runtime
+    from cuda.bindings import runtime as cudart
 
 def format_cudart_err(err):
     # https://gist.github.com/keckj/e37d312128eac8c5fca790ce1e7fc437
